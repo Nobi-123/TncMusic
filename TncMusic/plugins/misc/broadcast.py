@@ -4,23 +4,23 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.errors import FloodWait
 
-from TNCxMUSIC import app
-from TNCxMUSIC.misc import SUDOERS
-from TNCxMUSIC.utils.database import (
+from TncMusic import app
+from TncMusic.misc import SUDOERS
+from TncMusic.utils.database import (
     get_active_chats,
     get_authuser_names,
     get_client,
     get_served_chats,
     get_served_users,
 )
-from TNCxMUSIC.utils.decorators.language import language
-from TNCxMUSIC.utils.formatters import alpha_to_int
+from TncMusic.utils.decorators.language import language
+from TncMusic.utils.formatters import alpha_to_int
 from config import adminlist
 
 IS_BROADCASTING = False
 
 
-@app.on_message(filters.command("broadcast") & SUDOERS)
+@app.on_message(filters.command("bcast") & SUDOERS)
 @language
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
