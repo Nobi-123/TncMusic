@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.misc import SUDOERS
-from TNCxMUSIC.utils.database import autoend_off,autoend_on,autoleave_off, autoleave_on,is_autoend,is_autoleave
+from TncMusic import app
+from TncMusic.misc import SUDOERS
+from TncMusic.utils.database import autoend_off,autoend_on,autoleave_off, autoleave_on,is_autoend,is_autoleave
 
 
 @app.on_message(filters.command("autoend") & SUDOERS)
