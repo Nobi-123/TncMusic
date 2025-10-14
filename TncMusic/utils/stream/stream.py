@@ -5,15 +5,15 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from TNCxMUSIC import Carbon, YouTube, app
-from TNCxMUSIC.core.call import TNCx
-from TNCxMUSIC.misc import db
-from TNCxMUSIC.utils.database import add_active_video_chat, is_active_chat
-from TNCxMUSIC.utils.exceptions import AssistantErr
-from TNCxMUSIC.utils.inline import aq_markup, close_markup, stream_markup
-from TNCxMUSIC.utils.pastebin import TNCxBin
-from TNCxMUSIC.utils.stream.queue import put_queue, put_queue_index
-from TNCxMUSIC.utils.thumbnails import gen_thumb
+from TncMusic import Carbon, YouTube, app
+from TncMusic.core.call import TNC
+from TncMusic.misc import db
+from TncMusic.utils.database import add_active_video_chat, is_active_chat
+from TncMusic.utils.exceptions import AssistantErr
+from TncMusic.utils.inline import aq_markup, close_markup, stream_markup
+from TncMusic.utils.pastebin import TNCxBin
+from TncMusic.utils.stream.queue import put_queue, put_queue_index
+from TncMusic.utils.thumbnails import gen_thumb
 
 
 async def stream(
@@ -32,7 +32,7 @@ async def stream(
     if not result:
         return
     if forceplay:
-        await Aviax.force_stop_stream(chat_id)
+        await TNC.force_stop_stream(chat_id)
     if streamtype == "playlist":
         msg = f"{_['play_19']}\n\n"
         count = 0
@@ -79,7 +79,7 @@ async def stream(
                     )
                 except:
                     raise AssistantErr(_["play_14"])
-                await TNCx.join_call(
+                await TNC.join_call(
                     chat_id,
                     original_chat_id,
                     file_path,
@@ -116,7 +116,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await AviaxBin(msg)
+            link = await TNCxBin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -173,7 +173,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await TNCx.join_call(
+            await TNC.join_call(
                 chat_id,
                 original_chat_id,
                 file_path,
@@ -233,7 +233,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await TNCx.join_call(chat_id, original_chat_id, file_path, video=None)
+            await TNC.join_call(chat_id, original_chat_id, file_path, video=None)
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -285,7 +285,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await TNCx.join_call(chat_id, original_chat_id, file_path, video=status)
+            await TNC.join_call(chat_id, original_chat_id, file_path, video=status)
             await put_queue(
                 chat_id,
                 original_chat_id,
@@ -341,7 +341,7 @@ async def stream(
             n, file_path = await YouTube.video(link)
             if n == 0:
                 raise AssistantErr(_["str_3"])
-            await Aviax.join_call(
+            await TNC.join_call(
                 chat_id,
                 original_chat_id,
                 file_path,
@@ -399,7 +399,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Aviax.join_call(
+            await TNC.join_call(
                 chat_id,
                 original_chat_id,
                 link,
