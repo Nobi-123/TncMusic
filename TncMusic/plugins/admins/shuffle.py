@@ -3,10 +3,10 @@ import random
 from pyrogram import filters
 from pyrogram.types import Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.misc import db
-from TNCxMUSIC.utils.decorators import AdminRightsCheck
-from TNCxMUSIC.utils.inline import close_markup
+from TncMusic import app
+from TncMusic.misc import db
+from TncMusic.utils.decorators import AdminRightsCheck
+from TncMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
