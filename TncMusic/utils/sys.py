@@ -2,8 +2,8 @@ import time
 
 import psutil
 
-from TNCxMUSIC.misc import _boot_
-from TNCxMUSIC.utils.formatters import get_readable_time
+from TncMusic.misc import _boot_
+from TncMusic.utils.formatters import get_readable_time
 
 
 async def bot_sys_stats():
