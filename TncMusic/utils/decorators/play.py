@@ -9,9 +9,9 @@ from pyrogram.errors import (
 )
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from TNCxMUSIC import YouTube, app
-from TNCxMUSIC.misc import SUDOERS
-from TNCxMUSIC.utils.database import (
+from TncMusic import YouTube, app
+from TncMusic.misc import SUDOERS
+from TncMusic.utils.database import (
     get_assistant,
     get_cmode,
     get_lang,
@@ -20,7 +20,7 @@ from TNCxMUSIC.utils.database import (
     is_active_chat,
     is_maintenance,
 )
-from TNCxMUSIC.utils.inline import botplaylist_markup
+from TncMusic.utils.inline import botplaylist_markup
 from config import PLAYLIST_IMG_URL, SUPPORT_GROUP, adminlist
 from strings import get_string
 
