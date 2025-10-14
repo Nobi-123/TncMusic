@@ -4,10 +4,10 @@ from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.misc import SUDOERS
-from TNCxMUSIC.utils import get_readable_time
-from TNCxMUSIC.utils.database import (
+from TncMusic import app
+from TncMusic.misc import SUDOERS
+from TncMusic.utils import get_readable_time
+from TncMusic.utils.database import (
     add_banned_user,
     get_banned_count,
     get_banned_users,
@@ -15,8 +15,8 @@ from TNCxMUSIC.utils.database import (
     is_banned_user,
     remove_banned_user,
 )
-from TNCxMUSIC.utils.decorators.language import language
-from TNCxMUSIC.utils.extraction import extract_user
+from TncMusic.utils.decorators.language import language
+from TncMusic.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
