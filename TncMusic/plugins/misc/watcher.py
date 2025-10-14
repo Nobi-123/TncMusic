@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.core.call import TNCx
+from TncMusic import app
+from TncMusic.core.call import TNCx
 
 welcome = 20
 close = 30
