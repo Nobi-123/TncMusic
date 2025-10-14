@@ -1,7 +1,7 @@
 from pyrogram.enums import ParseMode
 
-from TNCxMUSIC import app
-from TNCxMUSIC.utils.database import is_on_off
+from TncMusic import app
+from TncMusic.utils.database import is_on_off
 from config import LOG_GROUP_ID
 
 
