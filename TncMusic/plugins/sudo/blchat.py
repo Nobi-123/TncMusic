@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.misc import SUDOERS
-from TNCxMUSIC.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
-from TNCxMUSIC.utils.decorators.language import language
+from TncMusic import app
+from TncMusic.misc import SUDOERS
+from TncMusic.utils.database import blacklist_chat, blacklisted_chats, whitelist_chat
+from TncMusic.utils.decorators.language import language
 from config import BANNED_USERS
 
 
