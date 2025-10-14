@@ -10,15 +10,15 @@ from git.exc import GitCommandError, InvalidGitRepositoryError
 from pyrogram import filters
 
 import config
-from TNCxMUSIC import app
-from TNCxMUSIC.misc import HAPP, SUDOERS, XCB
-from TNCxMUSIC.utils.database import (
+from TncMusic import app
+from TncMusic.misc import HAPP, SUDOERS, XCB
+from TncMusic.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
 )
-from TNCxMUSIC.utils.decorators.language import language
-from TNCxMUSIC.utils.pastebin import TNCxBin
+from TncMusic.utils.decorators.language import language
+from TncMusic.utils.pastebin import TNCxBin
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
