@@ -6,8 +6,8 @@ from typing import Union
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Voice
 
 import config
-from TNCxMUSIC import app
-from TNCxMUSIC.utils.formatters import (
+from TncMusic import app
+from TncMusic.utils.formatters import (
     check_duration,
     convert_bytes,
     get_readable_time,
