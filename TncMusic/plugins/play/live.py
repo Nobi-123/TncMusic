@@ -1,9 +1,9 @@
 from pyrogram import filters
 
-from TNCxMUSIC import YouTube, app
-from TNCxMUSIC.utils.channelplay import get_channeplayCB
-from TNCxMUSIC.utils.decorators.language import languageCB
-from TNCxMUSIC.utils.stream.stream import stream
+from TncMusic import YouTube, app
+from TncMusic.utils.channelplay import get_channeplayCB
+from TncMusic.utils.decorators.language import languageCB
+from TncMusic.utils.stream.stream import stream
 from config import BANNED_USERS
 
 
