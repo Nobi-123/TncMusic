@@ -6,22 +6,22 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from TNCxMUSIC import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from TNCxMUSIC.core.call import TNCx
-from TNCxMUSIC.utils import seconds_to_min, time_to_seconds
-from TNCxMUSIC.utils.channelplay import get_channeplayCB
-from TNCxMUSIC.utils.decorators.language import languageCB
-from TNCxMUSIC.utils.decorators.play import PlayWrapper
-from TNCxMUSIC.utils.formatters import formats
-from TNCxMUSIC.utils.inline import (
+from TncMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from TncMusic.core.call import TNC
+from TncMusic.utils import seconds_to_min, time_to_seconds
+from TncMusic.utils.channelplay import get_channeplayCB
+from TncMusic.utils.decorators.language import languageCB
+from TncMusic.utils.decorators.play import PlayWrapper
+from TncMusic.utils.formatters import formats
+from TncMusic.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from TNCxMUSIC.utils.logger import play_logs
-from TNCxMUSIC.utils.stream.stream import stream
+from TncMusic.utils.logger import play_logs
+from TncMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 
@@ -293,7 +293,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await TNCx.stream_call(url)
+                await TNC.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(_["black_9"])
                 return await app.send_message(
@@ -521,7 +521,7 @@ async def anonymous_check(client, CallbackQuery):
         pass
 
 
-@app.on_callback_query(filters.regex("AviaxPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("TncPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
