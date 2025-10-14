@@ -1,16 +1,16 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.utils import extract_user, int_to_alpha
-from TNCxMUSIC.utils.database import (
+from TncMusic import app
+from TncMusic.utils import extract_user, int_to_alpha
+from TncMusic.utils.database import (
     delete_authuser,
     get_authuser,
     get_authuser_names,
     save_authuser,
 )
-from TNCxMUSIC.utils.decorators import AdminActual, language
-from TNCxMUSIC.utils.inline import close_markup
+from TncMusic.utils.decorators import AdminActual, language
+from TncMusic.utils.inline import close_markup
 from config import BANNED_USERS, adminlist
 
 
