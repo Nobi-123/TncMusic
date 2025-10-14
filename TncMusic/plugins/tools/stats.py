@@ -9,13 +9,13 @@ from pyrogram.types import InputMediaPhoto, Message
 from pytgcalls.__version__ import __version__ as pytgver
 
 import config
-from TNCxMUSIC import app
-from TNCxMUSIC.core.userbot import assistants
-from TNCxMUSIC.misc import SUDOERS, mongodb
-from TNCxMUSIC.plugins import ALL_MODULES
-from TNCxMUSIC.utils.database import get_served_chats, get_served_users, get_sudoers,is_autoend,is_autoleave
-from TNCxMUSIC.utils.decorators.language import language, languageCB
-from TNCxMUSIC.utils.inline.stats import back_stats_buttons, stats_buttons
+from TncMusic import app
+from TncMusic.core.userbot import assistants
+from TncMusic.misc import SUDOERS, mongodb
+from TncMusic.plugins import ALL_MODULES
+from TncMusic.utils.database import get_served_chats, get_served_users, get_sudoers,is_autoend,is_autoleave
+from TncMusic.utils.decorators.language import language, languageCB
+from TncMusic.utils.inline.stats import back_stats_buttons, stats_buttons
 from config import BANNED_USERS
 
 
