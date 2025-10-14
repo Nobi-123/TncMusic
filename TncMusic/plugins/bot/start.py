@@ -6,10 +6,10 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from TNCxMUSIC import app
-from TNCxMUSIC.misc import _boot_
-from TNCxMUSIC.plugins.sudo.sudoers import sudoers_list
-from TNCxMUSIC.utils.database import (
+from TncMusic import app
+from TncMusic.misc import _boot_
+from TncMusic.plugins.sudo.sudoers import sudoers_list
+from TncMusic.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -17,10 +17,10 @@ from TNCxMUSIC.utils.database import (
     is_banned_user,
     is_on_off,
 )
-from TNCxMUSIC.utils import bot_sys_stats
-from TNCxMUSIC.utils.decorators.language import LanguageStart
-from TNCxMUSIC.utils.formatters import get_readable_time
-from TNCxMUSIC.utils.inline import help_pannel, private_panel, start_panel
+from TncMusic.utils import bot_sys_stats
+from TncMusic.utils.decorators.language import LanguageStart
+from TncMusic.utils.formatters import get_readable_time
+from TncMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
 
