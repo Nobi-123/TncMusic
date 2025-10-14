@@ -1,5 +1,5 @@
-from TNCxMUSIC.misc import SUDOERS
-from TNCxMUSIC.utils.database import get_lang, is_maintenance
+from TncMusic.misc import SUDOERS
+from TncMusic.utils.database import get_lang, is_maintenance
 from config import SUPPORT_GROUP
 from strings import get_string
 
