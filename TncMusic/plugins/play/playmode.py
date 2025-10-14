@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.utils.database import get_playmode, get_playtype, is_nonadmin_chat
-from TNCxMUSIC.utils.decorators import language
-from TNCxMUSIC.utils.inline.settings import playmode_users_markup
+from TncMusic import app
+from TncMusic.utils.database import get_playmode, get_playtype, is_nonadmin_chat
+from TncMusic.utils.decorators import language
+from TncMusic.utils.inline.settings import playmode_users_markup
 from config import BANNED_USERS
 
 
