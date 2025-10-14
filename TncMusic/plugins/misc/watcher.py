@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from TncMusic import app
-from TncMusic.core.call import TNCx
+from TncMusic.core.call import TNC
 
 welcome = 20
 close = 30
@@ -11,4 +11,4 @@ close = 30
 @app.on_message(filters.video_chat_started, group=welcome)
 @app.on_message(filters.video_chat_ended, group=close)
 async def welcome(_, message: Message):
-    await TNCx.stop_stream_force(message.chat.id)
+    await TNC.stop_stream_force(message.chat.id)
