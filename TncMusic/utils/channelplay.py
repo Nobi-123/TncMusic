@@ -1,5 +1,5 @@
-from TNCxMUSIC import app
-from TNCxMUSIC.utils.database import get_cmode
+from TncMusic import app
+from TncMusic.utils.database import get_cmode
 
 
 async def get_channeplayCB(_, command, CallbackQuery):
