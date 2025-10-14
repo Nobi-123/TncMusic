@@ -5,12 +5,12 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter
 from pyrogram.types import CallbackQuery, Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.core.call import TNCx
-from TNCxMUSIC.misc import db
-from TNCxMUSIC.utils.database import get_assistant, get_authuser_names, get_cmode
-from TNCxMUSIC.utils.decorators import ActualAdminCB, AdminActual, language
-from TNCxMUSIC.utils.formatters import alpha_to_int, get_readable_time
+from TncMusic import app
+from TncMusic.core.call import TNC
+from TncMusic.misc import db
+from TncMusic.utils.database import get_assistant, get_authuser_names, get_cmode
+from TncMusic.utils.decorators import ActualAdminCB, AdminActual, language
+from TncMusic.utils.formatters import alpha_to_int, get_readable_time
 from config import BANNED_USERS, adminlist, lyrical
 
 rel = {}
@@ -53,7 +53,7 @@ async def restartbot(client, message: Message, _):
     await asyncio.sleep(1)
     try:
         db[message.chat.id] = []
-        await TNCx.stop_stream_force(message.chat.id)
+        await TNC.stop_stream_force(message.chat.id)
     except:
         pass
     userbot = await get_assistant(message.chat.id)
@@ -80,7 +80,7 @@ async def restartbot(client, message: Message, _):
             pass
         try:
             db[chat_id] = []
-            await TNCx.stop_stream_force(chat_id)
+            await TNC.stop_stream_force(chat_id)
         except:
             pass
     return await mystic.edit_text(_["reload_5"].format(app.mention))
