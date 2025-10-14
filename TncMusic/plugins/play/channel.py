@@ -2,9 +2,9 @@ from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 from pyrogram.types import Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.utils.database import set_cmode
-from TNCxMUSIC.utils.decorators.admins import AdminActual
+from TncMusic import app
+from TncMusic.utils.database import set_cmode
+from TncMusic.utils.decorators.admins import AdminActual
 from config import BANNED_USERS
 
 
