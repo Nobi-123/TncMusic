@@ -1,13 +1,13 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.core.call import TNCx
-from TNCxMUSIC.misc import SUDOERS, db
-from TNCxMUSIC.utils import AdminRightsCheck
-from TNCxMUSIC.utils.database import is_active_chat, is_nonadmin_chat
-from TNCxMUSIC.utils.decorators.language import languageCB
-from TNCxMUSIC.utils.inline import close_markup, speed_markup
+from TncMusic import app
+from TncMusic.core.call import TNC
+from TncMusic.misc import SUDOERS, db
+from TncMusic.utils import AdminRightsCheck
+from TncMusic.utils.database import is_active_chat, is_nonadmin_chat
+from TncMusic.utils.decorators.language import languageCB
+from TncMusic.utils.inline import close_markup, speed_markup
 from config import BANNED_USERS, adminlist
 
 checker = []
@@ -94,7 +94,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         text=_["admin_32"].format(CallbackQuery.from_user.mention),
     )
     try:
-        await TNCx.speedup_stream(
+        await TNC.speedup_stream(
             chat_id,
             file_path,
             speed,
