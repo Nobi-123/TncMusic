@@ -1,12 +1,12 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.misc import SUDOERS
-from TNCxMUSIC.utils.database import add_sudo, remove_sudo
-from TNCxMUSIC.utils.decorators.language import language
-from TNCxMUSIC.utils.extraction import extract_user
-from TNCxMUSIC.utils.inline import close_markup
+from TncMusic import app
+from TncMusic.misc import SUDOERS
+from TncMusic.utils.database import add_sudo, remove_sudo
+from TncMusic.utils.decorators.language import language
+from TncMusic.utils.extraction import extract_user
+from TncMusic.utils.inline import close_markup
 from config import BANNED_USERS, OWNER_ID
 
 
