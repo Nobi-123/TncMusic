@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.misc import SUDOERS
-from TNCxMUSIC.utils.database import (
+from TncMusic import app
+from TncMusic.misc import SUDOERS
+from TncMusic.utils.database import (
     get_lang,
     is_maintenance,
     maintenance_off,
