@@ -1,8 +1,8 @@
 import asyncio
 from typing import Union
 
-from TNCxMUSIC.misc import db
-from TNCxMUSIC.utils.formatters import check_duration, seconds_to_min
+from TncMusic.misc import db
+from TncMusic.utils.formatters import check_duration, seconds_to_min
 from config import autoclean, time_to_seconds
 
 
