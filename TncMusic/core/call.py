@@ -17,9 +17,9 @@ from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQuality
 from pytgcalls.types.stream import StreamAudioEnded
 
 import config
-from TNCxMUSIC import LOGGER, YouTube, app
-from TNCxMUSIC.misc import db
-from TNCxMUSIC.utils.database import (
+from TncMusic import LOGGER, YouTube, app
+from TncMusic.misc import db
+from TncMusic.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_lang,
@@ -31,11 +31,11 @@ from TNCxMUSIC.utils.database import (
     remove_active_video_chat,
     set_loop,
 )
-from TNCxMUSIC.utils.exceptions import AssistantErr
-from TNCxMUSIC.utils.formatters import check_duration, seconds_to_min, speed_converter
-from TNCxMUSIC.utils.inline.play import stream_markup
-from TNCxMUSIC.utils.stream.autoclear import auto_clean
-from TNCxMUSIC.utils.thumbnails import gen_thumb
+from TncMusic.utils.exceptions import AssistantErr
+from TncMusic.utils.formatters import check_duration, seconds_to_min, speed_converter
+from TncMusic.utils.inline.play import stream_markup
+from TncMusic.utils.stream.autoclear import auto_clean
+from TncMusic.utils.thumbnails import gen_thumb
 from strings import get_string
 
 autoend = {}
