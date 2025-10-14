@@ -1,9 +1,9 @@
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from TNCxMUSIC import app
-from TNCxMUSIC.misc import SUDOERS, db
-from TNCxMUSIC.utils.database import (
+from TncMusic import app
+from TncMusic.misc import SUDOERS, db
+from TncMusic.utils.database import (
     get_authuser_names,
     get_cmode,
     get_lang,
