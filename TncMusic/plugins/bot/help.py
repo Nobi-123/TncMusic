@@ -3,11 +3,11 @@ from typing import Union
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.utils import help_pannel
-from TNCxMUSIC.utils.database import get_lang
-from TNCxMUSIC.utils.decorators.language import LanguageStart, languageCB
-from TNCxMUSIC.utils.inline.help import help_back_markup, private_help_panel
+from TncMusic import app
+from TncMusic.utils import help_pannel
+from TncMusic.utils.database import get_lang
+from TncMusic.utils.decorators.language import LanguageStart, languageCB
+from TncMusic.utils.inline.help import help_back_markup, private_help_panel
 from config import BANNED_USERS, START_IMG_URL, SUPPORT_GROUP
 from strings import get_string, helpers
 
