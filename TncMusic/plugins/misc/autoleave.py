@@ -3,15 +3,15 @@ from datetime import datetime
 from pyrogram.enums import ChatType
 from pytgcalls.exceptions import GroupCallNotFound
 import config
-from TNCxMUSIC import app
-from TNCxMUSIC.misc import db
-from TNCxMUSIC.core.call import TNCx, autoend, counter
-from TNCxMUSIC.utils.database import get_client, set_loop, is_active_chat, is_autoend, is_autoleave
+from TncMusic import app
+from TncMusic.misc import db
+from TncMusic.core.call import TNC, autoend, counter
+from TncMusic.utils.database import get_client, set_loop, is_active_chat, is_autoend, is_autoleave
 import logging
 
 async def auto_leave():
     while not await asyncio.sleep(900):
-        from TNCxMUSIC.core.userbot import assistants
+        from TncMusic.core.userbot import assistants
         ender = await is_autoleave()
         if not ender:
             continue
@@ -56,7 +56,7 @@ async def auto_end():
             nocall = False
             for chat_id in chatss:
                 try:
-                    users = len(await TNCx.call_listeners(chat_id))
+                    users = len(await TNC.call_listeners(chat_id))
                 except GroupCallNotFound:
                     users = 1
                     nocall = True
@@ -71,7 +71,7 @@ async def auto_end():
                     except Exception:
                         pass
                     try:
-                        await TNCx.stop_stream(chat_id)
+                        await TNC.stop_stream(chat_id)
                     except Exception:
                         pass
                     try:
