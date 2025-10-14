@@ -1,10 +1,10 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from TNCxMUSIC import app
-from TNCxMUSIC.utils.database import get_loop, set_loop
-from TNCxMUSIC.utils.decorators import AdminRightsCheck
-from TNCxMUSIC.utils.inline import close_markup
+from TncMusic import app
+from TncMusic.utils.database import get_loop, set_loop
+from TncMusic.utils.decorators import AdminRightsCheck
+from TncMusic.utils.inline import close_markup
 from config import BANNED_USERS
 
 
